@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ianunei-master-deploy
+  namespace: cicd
+  labels:
+    app: ianunei
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ianunei
+  template:
+    metadata:
+      labels:
+        app: ianunei
+    spec:
+      containers:
+      - name: ianunei-master
+        image: 192.168.211.85/javatest/ianunei-master:v1.0
+        ports:
+        - containerPort: 8080
