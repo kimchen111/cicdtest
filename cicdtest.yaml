@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: ianunei-master
-        image: 192.168.211.85/javatest/ianunei-master:v1.0
+        image: 192.168.211.85/javatest/ianunei-master:${tag}
         ports:
         - containerPort: 8080
